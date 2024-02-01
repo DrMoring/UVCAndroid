@@ -766,10 +766,10 @@ uvc_error_t uvc_probe_stream_ctrl(
     uvc_query_stream_ctrl(devh, ctrl, 1, UVC_SET_CUR);
     uvc_query_stream_ctrl(devh, ctrl, 1, UVC_GET_CUR);
 
-    if (!_uvc_stream_params_negotiated(&required_ctrl, ctrl)) {
+    /*if (!_uvc_stream_params_negotiated(&required_ctrl, ctrl)) {
         UVC_DEBUG("Unable to negotiate streaming format");
         return UVC_ERROR_INVALID_MODE;
-    }
+    }*/
 
     return UVC_SUCCESS;
 }
